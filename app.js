@@ -1,10 +1,11 @@
-const btn = document.getElementById("btn");
 const input = document.getElementById("inputField");
 const qrContainer = document.getElementById("qrcode");
-const download = document.getElementById("download");
-const share = document.getElementById("share");
 const inputContainer = document.getElementById("before");
 const componentContainer = document.getElementById("after");
+
+const btn = document.getElementById("btn");
+const download = document.getElementById("download");
+const share = document.getElementById("share");
 
 let qrCode;
 btn.addEventListener("click", () => {
@@ -27,3 +28,19 @@ btn.addEventListener("click", () => {
     });
   }
 });
+
+download.addEventListener("click", () => {
+  const img = qrContainer.querySelector("img");
+  if (!img) return;
+
+  const link = document.createElement("a");
+  link.href = img.src;
+  link.download = "qrcode.png";
+  link.click();
+});
+
+share.addEventListener('click', () =>{
+  
+})
+
+
