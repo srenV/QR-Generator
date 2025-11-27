@@ -82,9 +82,9 @@
       }
 
       .qrcode{
-        height: 250px;
-        width: 250px;
-        background-color: #1b37b5;
+        height: 275px;
+        width: 275px;
+        background-color: white;
         border-radius: 1em;
         display: flex;
         flex-direction: column;

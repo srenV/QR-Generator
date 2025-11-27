@@ -23,8 +23,8 @@ btn.addEventListener("click", () => {
 
     qrCode = new QRCode(qrContainer, {
       text: text,
-      width: 200,
-      height: 200,
+      width: 250,
+      height: 250,
     });
   }
 });
@@ -40,8 +40,6 @@ download.addEventListener("click", () => {
 });
 
 share.addEventListener('click', async () =>{
-
-
   try{
     await navigator.clipboard.writeText(input.value)
   }catch(err){
