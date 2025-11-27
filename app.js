@@ -43,7 +43,7 @@ share.addEventListener('click', async () =>{
 
 
   try{
-    await navigator.clipboard.writeText(input.value.trim())
+    await navigator.clipboard.writeText(input.value)
   }catch(err){
     console.log(err)
   }
