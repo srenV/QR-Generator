@@ -39,8 +39,14 @@ download.addEventListener("click", () => {
   link.click();
 });
 
-share.addEventListener('click', () =>{
-  
+share.addEventListener('click', async () =>{
+
+
+  try{
+    await navigator.clipboard.writeText(input.value.trim())
+  }catch(err){
+    console.log(err)
+  }
 })
 
 
