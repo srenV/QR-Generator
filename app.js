@@ -1,3 +1,10 @@
+// ============================================================
+// QR Code Generator Application - Main Logic
+// ============================================================
+
+// ============================================================
+// DOM Element References
+// ============================================================
 const input = document.getElementById("inputField");
 const qrContainer = document.getElementById("qrcode");
 const inputContainer = document.getElementById("before");
@@ -7,7 +14,16 @@ const btn = document.getElementById("btn");
 const download = document.getElementById("download");
 const share = document.getElementById("share");
 
+// ============================================================
+// QR Code Instance
+// ============================================================
 let qrCode;
+
+// ============================================================
+// Event Listeners
+// ============================================================
+
+// Generate QR Code on button click
 btn.addEventListener("click", () => {
   const text = input.value.trim();
 
@@ -29,6 +45,7 @@ btn.addEventListener("click", () => {
   }
 });
 
+// Download QR Code as image
 download.addEventListener("click", () => {
   const img = qrContainer.querySelector("img");
   if (!img) return;
@@ -39,6 +56,7 @@ download.addEventListener("click", () => {
   link.click();
 });
 
+// Copy QR Code input to clipboard
 share.addEventListener('click', async () =>{
   try{
     await navigator.clipboard.writeText(input.value)

@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- ============================================================ -->
+<!-- QR Code Generator Application -->
+<!-- ============================================================ -->
+
 <head>
+  <!-- Meta Information -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="./styles.css" />
+  
+  <!-- Favicon -->
   <link rel="icon" href="resources/favicon.ico" type="image/x-icon" sizes="96x96" />
+  
+  <!-- External Libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  
+  <!-- Page Title -->
   <title>QR code generator | devChallenges.io</title>
 </head>
 
 <body>
+  <!-- Page Header -->
   <header></header>
+  
+  <!-- Main Content -->
   <main>
+    <!-- Logo Section -->
     <div>
       <img src="./resources/Logo.svg" alt="" />
     </div>
+    
+    <!-- Input Section (Before QR Code Generation) -->
     <div class="before" id="before">
       <input type="text" name="inputField" id="inputField" placeholder="Enter an url" />
       <button id="btn">QR code</button>
     </div>
+    
+    <!-- Output Section (After QR Code Generation) -->
     <div class="after" id="after">
       <div class="qrcode" id="qrcode"></div>
       <div class="buttonDiv">
@@ -28,12 +49,16 @@
       </div>
     </div>
   </main>
+  
+  <!-- Page Footer -->
   <footer>
     <div class="author-info">
       Coded by <a href="#">Soeren Timo Voigt</a> | Challenge by
       <a href="https://www.devchallenges.io?ref=challenge" target="_blank">devChallenges.io</a>.
     </div>
   </footer>
+  
+  <!-- Application Script -->
   <script src="./app.js"></script>
 </body>
 
